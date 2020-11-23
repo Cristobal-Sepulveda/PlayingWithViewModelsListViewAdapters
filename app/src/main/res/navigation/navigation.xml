@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/listViewFragment">
+
+    <fragment
+        android:id="@+id/listViewFragment"
+        android:name="com.example.playingwithviewmodelslistviewadapters.fragments.ListViewFragment"
+        android:label="ListViewFragment" >
+        <action
+            android:id="@+id/action_listViewFragment_to_itemMakerFragment"
+            app:destination="@id/itemMakerFragment"
+            app:popUpTo="@id/listViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemMakerFragment"
+        android:name="com.example.playingwithviewmodelslistviewadapters.fragments.ItemMakerFragment"
+        android:label="ItemMakerFragment" >
+        <action
+            android:id="@+id/action_itemMakerFragment_to_listViewFragment"
+            app:destination="@id/listViewFragment"
+            app:popUpTo="@id/itemMakerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
